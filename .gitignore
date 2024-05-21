@@ -1,1 +1,6 @@
 leandojo_benchmark_4/
+data/
+llama3/
+traced_repo.pkl
+llama3-mathlib-sft/
+lean_cai/__pycache__/
