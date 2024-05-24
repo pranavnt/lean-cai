@@ -4,3 +4,9 @@ llama3/
 traced_repo.pkl
 llama3-mathlib-sft/
 lean_cai/__pycache__/
+tests/
+wandb/
+cai_data_no_round.pkl
+cai_data_with_rounds.pkl
+traced_repo.pkl
+lean_proof_checker/

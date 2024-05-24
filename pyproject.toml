@@ -17,6 +17,8 @@ transformers = "^4.41.0"
 sentencepiece = "^0.2.0"
 lean-client = {git = "https://github.com/leanprover-community/lean-client-python"}
 trio = "^0.25.1"
+anthropic = "^0.26.1"
+wandb = "^0.17.0"
 
 
 [tool.poetry.group.dev.dependencies]

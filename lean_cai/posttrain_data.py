@@ -1,4 +1,13 @@
-def get_dataset():
+from typing import List
+
+class F2FData:
+  def __init__(self, theorem: str):
+    self.theorem = theorem
+
+  def train_str(self) -> str:
+    return self.theorem.replace("sorry", "")
+
+def get_dataset() -> List[F2FData]:
   data = [
   """import Mathlib.Algebra.Ring.Basic
 import Mathlib.Data.Complex.Basic
@@ -912,13 +921,4 @@ theorem mathd_numbertheory_1124
   ]
 
   return [F2FData(t) for t in data]
-
-class F2FData:
-  def __init__(self, theorem: str):
-    self.theorem = theorem
-
-  def train_str(self) -> str:
-    return self.theorem.replace("sorry", "")
-
-
 print(get_dataset()[20].train_str())
