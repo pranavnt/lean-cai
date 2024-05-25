@@ -117,7 +117,7 @@ def train(policy_model, reference_model, dataloader, optimizer, beta):
     })
 
 def main():
-    JSONL_PATH = "./data/cai/jsonl_final.jsonl"
+    JSONL_PATH = "./jsonl_final.jsonl"
 
     model_path = "./llama3-mathlib-sft"
     tokenizer = AutoTokenizer.from_pretrained(model_path)

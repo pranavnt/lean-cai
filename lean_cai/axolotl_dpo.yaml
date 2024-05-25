@@ -1,0 +1,5 @@
+rl: dpo
+datasets:
+  - path: Intel/orca_dpo_pairs
+    split: train
+    type: chat_template.llama3
