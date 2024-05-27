@@ -8,9 +8,9 @@ class GPT:
         self.params = params
         self.client = OpenAI(api_key=api_key, base_url="https://api.together.xyz")
 
-    def generate(self, messages, data_model):
-        max_tokens = self.params.get("max_tokens", 20000)
-        model = "mistralai/Mixtral-8x7b-Instruct-v0.1"
+    def generate(self, messages, data_model=None):
+        max_tokens = self.params.get("max_tokens", 4000)
+        model = "pranavnt@outlook.com/Meta-Llama-3-8B-mathlib-sft-2024-05-20-03-22-26   "
 
         if data_model is not None:
             response = self.client.chat.completions.create(
@@ -33,7 +33,7 @@ class GPT:
             )
 
             try:
-                json.loads(response.choices[0].message.content)
+                return response.choices[0].message.content
             except:
                 print("Failed to parse response as JSON")
                 print(response)
